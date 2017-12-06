@@ -1,0 +1,93 @@
+<html class="cssanimations">
+
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>注册</title>
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="AMUI React">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="assets/amazeui.touch.min.css">
+    <link rel="stylesheet" href="assets/amazeui.touch.css">
+    <link rel="stylesheet" href="assets/Logup.css"> <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+</head>
+<style>
+    .am-header-title{
+        position: relative;
+        top: 0.8rem;
+    }
+</style>
+<body>
+   <header data-am-widget="header"
+          class="am-header am-header-default">
+     <div class="am-header-left am-header-nav">
+          <a href="widget.html"><i class="am-icon-home"></i>主页</a>
+      </div>
+
+      <h1 class="am-header-title">
+          耳穴网
+      </h1>
+ <div class="am-header-right am-header-nav">
+          <a href="Login.html"><i class="am-icon-user"></i>登录</a>
+      </div>
+
+  </header>
+    <!-- <header class="navbar navbar-primary">
+
+        <h1 class="navbar-title navbar-center">注&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp册</h1>
+    </header> -->
+
+    <div class="container container-fill container-scrollable">
+        <div class="group-body">
+           <label class="field-container phone">
+                <span class="field-label">电 话</span>
+                <div class="field-group">
+                    <input type="text" placeholder="请输入您的电话号码(必填)" class="field" id="username"/>
+                    <button class="btn" id="getVerificationCode">获取验证码</button>
+                </div>
+
+                <h6 class="hidden" id="check-username">* 请输入正确的电话号码</h6>
+                <br>
+                <span class="field-label">验 证 码</span>
+                <input type="text" placeholder="请输入验证码(必填)" class="field" id="VerificationCodeInput"/>
+                <h6 class="hidden" id="check-VerificationCodeInput">*请填写验证码</h6>
+                <h6 class="hidden" id="check-VerificationCodeInputError">* 验证码填写错误</h6>
+                <br>
+            </label>
+            <label class="field-container">
+                <span class="field-label">密 码</span>
+                <input type="password" placeholder="请设置6位数字或字母的密码(必填)" class="field" id="passwdfirst"/>
+                <h6 class="hidden" id="check-passwdfirst">* 请填写密码</h6>
+                <br>
+            </label>
+            <label class="field-container">
+                <span class="field-label">确 认 密 码</span>
+                <input type="password" placeholder="请确认您的密码(必填)" class="field" id="passwdsecond"/>
+                <h6 class="hidden" id="check-passwdsecond">* 两次密码不一致</h6>
+            </label>
+
+            <input type="submit" class="btn btn-secondary btn-block" value="提交" id="submit">
+        </div>
+    </div>
+    <!--
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/amazeui.touch.js"></script>
+    <script src="assets/amazeui.touch.min.js"></script>
+    <script src="assets/Logup.js"></script>
+</body>
+</html>

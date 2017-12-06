@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+<script type="text/javascript">
+	var oli = document.getElementsByTagName('li');
+	var num = oli.length;
+	for (var i = 0; i < num; i++) {
+		var oli[i].index = i;
+		oli[i].addEventListener("click",function(){
+			console.log(this.index);
+		},false)
+		
+	}
+</script>
+</body>
+</html>

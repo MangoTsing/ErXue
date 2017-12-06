@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Login Page | 耳穴</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+  <style>
+  #getimg{
+    width: 200px;
+    height: 200px;
+  }
+    .header {
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 200%;
+      color: #333;
+      margin-top: 30px;
+    }
+    .header p {
+      font-size: 14px;
+    }
+    #emailWarn{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="am-g">
+    <h1>耳穴注册</h1>
+    <p> 开发页面，可以作为广告区域<br/>代码编辑，代码生成，界面设计，调试，编译</p>
+  </div>
+  <hr />
+</div>
+<div class="am-g">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+    <h3>第三方登录</h3>
+    <hr>
+    <div class="am-btn-group">
+      <a href="#" class="am-btn am-btn-secondary am-btn-sm"><i class="am-icon-wechat am-icon-sm"></i>微信登陆</a>
+      <a href="#" class="am-btn am-btn-success am-btn-sm"><i class="am-icon-qq am-icon-sm"></i> QQ登录</a>
+      <a href="#" class="am-btn am-btn-primary am-btn-sm"><i class="am-icon-weibo am-icon-sm"></i> 微博登录</a>
+    </div>
+    <br>
+    <br>
+
+    <form method="post" class="am-form" action="http://111.230.141.147:8080/ErXueSSM/regist.action" enctype="multipart/form-data">
+      <label for="email">邮箱:</label>
+      <input type="email" name="username" id="email" value="">
+      <p id="emailWarn"></p>
+      <br>
+      <label for="password">密码:</label>
+      <input type="password" name="password" id="password" value="">
+      <br>
+       <label for="text">手机号:</label>
+      <input type="text" name="mobilePhone" id="mobilePhone" value="">
+      <button id="btn1" type="button" class="am-btn am-btn-success am-btn-md am-fr ">发送验证码</button>
+      <br>
+       <label for="text">验证码:</label>
+      <input type="text" name="verifyCode" id="verifyCode" value="">
+      <br>
+      <label for="text">真实姓名:</label>
+      <input type="text" name="realname" id="realname" value="">
+      <br>
+      <label for="text">年龄:</label>
+      <input type="text" name="age" id="age" value="">
+      <br>
+
+      <label for="description">病情描述:</label>
+      <input type="text" name="description" id="description" value="">
+      <br>
+     <div class="am-form-group am-form-file">
+  <button type="button" class="am-btn am-btn-danger am-btn-sm">
+    <i class="am-icon-cloud-upload"></i> 选择要上传的头像</button>
+  <input id="doc-form-file" type="file"  name="upload_pic" multiple>
+</div>
+<div id="file-list"></div>
+      <label for="remember-me">
+        <input id="man" name="gender" type="radio" value="man">
+        男
+        <input id="woman" name="gender" type="radio" value="woman">
+        女  
+      </label>
+      <br />
+      <div class="am-form-group ">
+        <i id="getimg"></i>
+      </div>
+<script>
+  $(function() {
+    $('#doc-form-file').on('change', function() {
+      var fileNames = '';
+      $.each(this.files, function() {
+        fileNames += '<span class="am-badge">' + this.name + '</span> ';
+      });
+      $('#file-list').html(fileNames);
+    });
+  });
+</script>
+      <div class="am-cf">
+        <input type="submit" name="" value="注 册" class="am-btn am-btn-primary am-btn-lg am-fl">
+        <input type="submit" name="" value="忘记密码 ^_^? " class="am-btn am-btn-default am-btn-sm am-fr">
+      </div>
+    </form>
+    <hr>
+    <p></p>
+  </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script>
+// alert($('#email').val());
+
+ $('#email').blur(function(event) {
+   /* Act on the event */
+ 
+  $.ajax({
+    url: 'http://111.230.141.147:8080/ErXueSSM/checkUsername.action',
+    type: 'GET',
+    dataType: '',
+    data: {username: $('#email').val()},
+    success:function(data){
+            if(data){
+              $('#emailWarn').text('此用户未被注册');
+              $('#emailWarn').css({
+                display: 'block',
+                color: 'green'
+              });
+                 setTimeout(function(){
+                    $('#emailWarn').css({
+                        display: 'none',
+                        color: 'green'
+                      });
+                    },5000); 
+             } 
+              
+            else{
+              $('#emailWarn').text('此用户已经被注册');
+              $('#emailWarn').css({
+                display: 'block',
+                color: 'red'
+              });
+                 
+            }
+
+          }
+      });
+   });
+$('#btn1').click(function(event) {
+  /* Act on the event */
+    $.ajax({
+      url: 'http://111.230.141.147:8080/ErXueSSM/sendMessageVerifyCode.action',
+      type: 'GET',
+      async: false,
+      dataType: 'text',
+      data: {mobilePhone:$('#mobilePhone').val() },
+      success:function(data){
+        if(data===200){
+          alert('发送成功,60秒后可以再次发送');
+          $('#btn1').addClass('am-disabled');
+          setTimeout(function(){
+            $('#btn1').removeClass('am-disabled');
+          }, 60000);
+        }else if(data===416){
+          alert('已经发送3次，禁止发送');
+          $('#btn1').addClass('am-disabled');
+           
+        }else{
+          alert('请输入正确的手机号');
+        }
+      
+        $('#verifyCode').blur(function() {
+    /* Act on the event */
+   
+          $.ajax({
+            url: 'http://111.230.141.147:8080/ErXueSSM/checkout.action',
+            type: 'GET',
+            dataType: 'text',
+            async: false,
+            data: {verifyCode: $('#verifyCode').val()},
+            success:function(data){
+                console.log(data);
+            } 
+          });
+        });
+        console.log(data);
+
+
+
+
+
+      }
+    });
+    
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>耳穴首页</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <style>
+    .get {
+      background: url('./timg.jpg');
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #4CD0E8;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+  </style>
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="./landing.html">耳穴网</a>
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><a href="./landing.html">首页</a></li>
+        <li><a href="./blog.html">耳穴介绍</a></li>
+        <li><a href="#">耳穴论坛</a></li>
+        <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            患病部位 <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content ">
+         <!--  <style>
+          .auto-div{
+            display: none;
+            width: 300px;
+            height: 300px;
+            background: white;
+           opacity: 0.9;
+           
+            float: right;
+          }
+        </style>
+        <div class="auto-div am-dropdown-content">
+          <ul class="">
+            <li class="am-dropdown-header ">患病分类</li>
+            <li class=""><a href="#">1. 胸部</a></li>
+            <li class=""><a href="#">2. 腿部</a></li>
+            <li class=""><a href="#">3. 耳部</a></li>
+            <li class=""><a href="#">4. 脑部</a></li>
+            <li class=""><a href="#">5.心脏</a></li>
+            <li class=""><a href="#">6.眼睛</a></li>
+          </ul>
+        </div>  -->
+        <div class="am-panel-group" id="accordion">
+        <li class="am-dropdown-header ">患病部位</li>
+  <div class="am-panel am-panel-default">
+
+    <div class="am-panel-hd">
+
+      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-1'}">
+        1. 胸部
+      </h4>
+    </div>
+    <div id="do-not-say-1" class="am-panel-collapse am-collapse am-in">
+      <div class="am-panel-bd">
+       1.胸膜炎
+      </div>
+    </div>
+  </div>
+  <div class="am-panel am-panel-default">
+    <div class="am-panel-hd">
+      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-2'}">
+        2. 腿部
+      </h4>
+    </div>
+    <div id="do-not-say-2" class="am-panel-collapse am-collapse">
+      <div class="am-panel-bd">
+        1. 小腿红肿
+      </div>
+    </div>
+  </div>
+  <div class="am-panel am-panel-default">
+    <div class="am-panel-hd">
+      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-3'}">3.耳部</h4>
+    </div>
+    <div id="do-not-say-3" class="am-panel-collapse am-collapse">
+      <div class="am-panel-bd">
+        1.耳朵痒
+      </div>
+    </div>
+  </div>
+  <div class="am-panel am-panel-default">
+    <div class="am-panel-hd">
+      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-4'}">4. 脑部</h4>
+    </div>
+    <div id="do-not-say-4" class="am-panel-collapse am-collapse">
+      <div class="am-panel-bd">
+        1. 脑晕
+      </div>
+      <div class="am-panel-bd">
+        2. 发烧
+      </div>
+    </div>
+  </div>
+</div>
+            
+           <!--  <li class="xiong"><a href="#">1. 胸部</a></li>
+            <li class="tui"><a href="#">2. 腿部</a></li>
+            <li class="er"><a href="#">3. 耳部</a></li>
+            <li class="nao"><a href="#">4. 脑部</a></li>
+            <li class="xin"><a href="#">5.心脏</a></li>
+            <li class="yan"><a href="#">6.眼睛</a></li> -->
+          </ul>
+
+
+        </li>
+
+
+        
+      </ul>
+      
+
+      <div class="am-topbar-right">
+        <a href="./addNew.html"><button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button></a>
+      </div>
+
+      <div class="am-topbar-right">
+        <a href="./login.html"><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="get">
+  <div class="am-g">
+    <div class="am-u-lg-12">
+      <h1 class="get-title">2017耳穴网</h1>
+
+      <p>
+        欢迎来信咨询耳穴相关事宜
+      </p>
+
+      <p>
+        <a href="http://amazeui.org" class="am-btn am-btn-sm get-btn">点击了解更多耳穴功能以及使用方法</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="detail">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="detail-h2">耳穴治疗特点</h2>
+
+      <div class="am-g">
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+
+          <h3 class="detail-h3">
+            <i class="am-icon-mobile am-icon-sm"></i>
+               1、用范围广
+          </h3>
+
+          <p class="detail-p">
+         
+耳穴具有调节神经平衡、镇静止痛、疏通经络、调节气血阴阳、强身壮体等功能，广泛用于内、外、妇、儿、神经、五官、皮肤等各科疾病。对功能性疾病，如神经衰弱、情绪不稳定、忧郁、焦虑、紧张、疲劳综合征、神经功能紊乱等均有治疗作用。据统计，耳穴可治疗200余种病症，疗效大多在83%~99%，对于一些急性扭伤、痛症等病例可收到立竿见影之疗效。
+
+          </p>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-cogs am-icon-sm"></i>
+            2、  能防能治
+          </h3>
+
+          <p class="detail-p">
+            
+耳穴既可以治病，又可以防病。近年来的实践证明，耳穴可以提高机体免疫力，增强抗病能力，能防治晕车、晕船、经济综合征等，还可以用于戒烟、戒酒、美容、保健、摄生、抗衰老。
+
+          </p>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-check-square-o am-icon-sm"></i>
+            3、  副作用少
+          </h3>
+
+          <p class="detail-p">
+            
+耳穴是一种较为安全的自然疗法，既无刺伤内脏之虞，也可以避免药源性疾病的发生。
+
+          </p>
+        </div>
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-send-o am-icon-sm"></i>
+             4、  可补中药体针之不足
+          </h3>
+
+          <p class="detail-p">
+           
+单用中药体针疗效较差时，可选用耳穴治疗，或耳穴配合中药体针综合治疗以增强疗效。耳穴不但可以调阴阳、补虚损、泻火毒、疏气血、调节脏腑功能，还有抗过敏、抗晕厥、抗感染、抗风湿等作用。此外，在改善微循环、松弛肌肉痉挛、降血脂、改善抑郁、调整情绪、增强免疫力等方面都有其独到的疗效，以弥补中药体针之不足。
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="about">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="about-title about-color">
+  耳穴的分布有一定的规律性，耳穴大多数以人体解剖学名称命名，易学易记，操作简便，随时随地都可应用，不需要特殊设备。
+</h2>
+
+      <div class="am-g">
+        <div class="am-u-lg-6 am-u-md-4 am-u-sm-12">
+          <form class="am-form">
+            <label for="name" class="about-color">你的姓名</label>
+            <input id="name" type="text">
+            <br/>
+            <label for="email" class="about-color">你的邮箱</label>
+            <input id="email" type="email">
+            <br/>
+            <label for="message" class="about-color">你的留言</label>
+            <textarea id="message"></textarea>
+            <br/>
+            <button type="submit" class="am-btn am-btn-primary am-btn-sm"><i class="am-icon-check"></i> 提 交</button>
+          </form>
+          <hr class="am-article-divider am-show-sm-only">
+        </div>
+
+        <div class="am-u-lg-6 am-u-md-8 am-u-sm-12">
+          <h4 class="about-color">关于耳穴</h4>
+
+          <p>耳穴就是分布于耳廓上的腧穴。也叫反应点、刺激点。当人体内脏或躯体有病时，往往会在耳廓的一定部位出现局部反应，如压痛、结节、变色、导电性能等。利用这一现象可以作为诊断疾病的参考，或刺激这些反应点（耳穴）来防治疾病。
+耳与脏腑经络有着密切的关系。各脏腑组织在耳廓均有相应的反应区（耳穴）。刺激耳穴，对相应的脏腑有一定的调治作用。刺激耳穴的主要方法有：针刺、埋针、放血、耳穴贴压、磁疗、按摩等。人体某一部分有病时，就会反应在耳郭的一定部位上，这些部位就是耳针治疗的刺激点，统称为耳穴。
+                                                摘自《百度百科》
+</p>
+          <h4 class="about-color">提出建议</h4>
+
+          <p>您可以在左侧给我们留言，给我们提出宝贵的意见，谢谢您的访问。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2017 耳穴网</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+ <script>
+              window.onload=function(){
+                $('.xiong').mouseenter(function(event) {
+                
+                  $('.auto-div').css('display', 'none');
+                });
+                $('.xiong').mouseleave(function(event) {
+                    
+                  $('.auto-div').css('display', 'block');
+                });
+              }
+               </script>
+</body>
+</html>

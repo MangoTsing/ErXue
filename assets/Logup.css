@@ -1,0 +1,21 @@
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+h6{
+    /* margin-top: 0; */
+    font-size: .7rem;
+    padding-left: 1rem;
+    color: red;
+}
+
+.phone .field-group{
+    margin-top: .4rem;
+}
+
+#submit{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}

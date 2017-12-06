@@ -1,0 +1,208 @@
+
+<html class="am-touch js cssanimations"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>根据疾病ID查询穴位</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<style>
+  .zhiding{
+        position: fixed;
+        top: 0;
+    }
+  /* #btn1 a{
+    display: none;
+  } */
+  p{
+    padding-left: 20px;
+  }
+  ul{
+      padding-top: 3rem;
+      list-style: none;
+      clear: both;
+    }
+    #tab li{
+      display: block;
+      line-height: 4rem;
+      border-bottom: 1px dashed #999;
+    }
+    a{
+      text-decoration: none;
+    }
+    .set{
+      position: absolute;
+      left: 1.5rem;
+      bottom: 1rem;
+    }
+    .am-icon-bars{
+      display: block;
+      float: right;
+      margin-top: 1em;
+      color: #fff;
+    }
+    .am-icon-bars:hover{
+      cursor: pointer;
+    }
+    .toux{
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      border:1px solid #fff;
+      margin: 1rem auto 1rem 2rem;
+      overflow: hidden;
+      float: left;
+    }
+    .am-icon-home{
+      display: block;
+      float: left;
+      margin-top: 1em;
+      color: #fff;
+    }
+    .am-icon-home:hover{
+      cursor: pointer;
+    }
+</style>
+<body class="am-with-fixed-navbar">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器， 不提供支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+    <header data-am-widget="header" class="am-header am-header-default am-no-layout zhiding">
+        <a href="widget.html"><i class="am-icon-home"></i></a>
+        <i class="am-icon-bars" data-am-offcanvas="{target: '#bars'}"></i>
+  
+        <h1 class="am-header-title">
+            相关穴位
+        </h1>
+  
+    </header>
+    <div id="bars" class="am-offcanvas">
+      <div class="am-offcanvas-bar">
+        <div class="am-offcanvas-content">
+          <div class="toux">
+            <img src="#">
+          </div>
+          <p>用户名</p>
+          <ul id="tab">
+            <li class="am-icon-commenting-o"><a href="widget7.html">&nbsp&nbsp&nbsp评论</a></li>
+            <li class="am-icon-hand-paper-o"><a href="widget6.html">&nbsp&nbsp&nbsp提问</a></li>
+            <li class="am-icon-search"><a href="">&nbsp&nbsp&nbsp查询</a></li>
+          </ul>
+          <a href="#" class="am-icon-gear set">&nbsp&nbsp&nbsp设置</a>
+        </div>
+      </div>
+    </div>
+  <!--  -->
+<!-- 
+   --> <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+   <div class="main-class" style="margin-top: 50px;position: relative;">
+        <a href="" id="more" style="position: absolute;right: 5px;bottom: -4rem;font-size: 12px;color: #333;">了解详情>></a> 
+       </div>
+       
+ <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default am-no-layout" id="">
+        <ul class="am-navbar-nav am-cf am-avg-sm-4">
+            <li data-am-navbar-qrcode="">
+              <a href="" class="">
+                    <span class="am-icon-qrcode"></span>
+                  <span class="am-navbar-label">二维码</span>
+              </a>
+            </li>
+             <li>
+              <a href="widget6.html" class="">
+                    <span class="am-icon-user-md"></span>
+                  <span class="am-navbar-label">一键咨询</span>
+              </a>
+            </li>
+            <li>
+              <a href="widget8.html" class="">
+                    <span class="am-icon-male"></span>
+                  <span class="am-navbar-label">我的资料</span>
+              </a>
+            </li>
+        </ul>
+    </div>
+
+   
+    <footer data-am-widget="footer" class="am-footer am-footer-default am-no-layout" data-am-footer="{  }">
+      <div class="am-footer-switch">
+      <span class="am-footer-ysp" data-rel="mobile" data-am-modal="{target: '#am-switch-mode'}">
+          手机版
+      </span>
+       
+      </div>
+      <div class="am-footer-miscs ">
+  
+            
+          <p>CopyRight©2017  耳穴 Inc.</p>
+      </div>
+    </footer>
+  
+    <div id="am-footer-modal" class="am-modal am-modal-no-btn am-switch-mode-m ">
+      <div class="am-modal-dialog">
+        <div class="am-modal-hd am-modal-footer-hd">
+          <a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close="">×</a>
+        </div>
+        <!-- <div class="am-modal-bd">
+            您正在浏览的是
+          
+          <span class="am-switch-mode-owner">
+              上官衍鹏
+          </span>
+          
+          <span class="am-switch-mode-slogan">
+                为您当前手机订制的移动网站。
+          </span>
+        </div> -->
+      </div>
+    </div>
+  
+ 
+
+
+
+<div class="am-modal am-modal-no-btn" id=""><div class="am-modal-dialog"><div class="am-modal-bd"><canvas width="200" height="200"></canvas></div></div></div></body></html>
+
+
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.js"></script>
+<script src="assets/js/handlebars.min.js"></script>
+<script src="assets/js/amazeui.widgets.helper.js"></script>
+<script src="assets/js/url.js"></script>
+
+<script>
+ //findDiseaseCategoryBySystemId.action
+ var dId=window.location.href.split('=',2)[1];
+$.ajax({
+  url: url+'/ErXueSSM/findAcupointsByDiseaseId.action',
+  type: 'GET',
+  dataType: '',
+  data: {diseaseId: dId},
+  success:function(data){
+    console.log(data);
+    var mod=[];
+      for(var i=0;i<data.acupointCustomList.length;i++){
+        //console.log(data.acupointCustomList[i].acupointName);
+          $('.main-class').append( '<div style="clear:both;"><a><p style="float:left;">'+data.acupointCustomList[i].acupointName+'</p></a>' +'<a class="am-icon-commenting-o" style="float:right;margin-right:1rem;" href=./widget7.html?diseaseId='+data.diseaseId+'></a></div>');
+      }
+      $('#more').attr('href', './widget5.html?diseaseId='+dId);
+      $('.am-header-title').text(data.diseaseName);
+      /*$('#btn1 a').css('display', 'block');*/
+    }
+});
+ 
+</script>
+</body>
+</html>

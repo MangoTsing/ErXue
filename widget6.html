@@ -1,0 +1,273 @@
+
+<html class="am-touch js cssanimations"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>我要提问</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <style type="text/css">
+    .btn-secondary:hover {
+    background: #10a4ef;
+    border-color: #10a4ef;
+    border-radius: 2px;
+    color: #fff;
+  }
+  .btn-block {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .btn {
+    display: inline-block;
+    border: 0;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: .25s ease-out;
+    transition: .25s ease-out;
+    vertical-align: middle;
+    padding: .75em 1em;
+    margin: 0 1rem 1rem 0;
+    margin-right: 1rem;
+    margin-left: 0px;
+    border-radius: 0;
+    font-size: 1rem;
+    background: #69c4ee;
+    border: 1px solid #e6e6e6;
+    color: #333;
+}
+.am-accordion-default{
+    box-shadow: none;
+    -webkite-box-shadow:none;
+}
+textarea{
+  width: 100%;
+}
+label{
+  display: block;
+}
+.am-icon-home{
+      display: block;
+      float: left;
+      margin-top: 1em;
+      color: #fff;
+    }
+    .am-icon-home:hover{
+      cursor: pointer;
+    }
+    .box{
+      margin-top: -5px;
+      width: 200px;
+      height: 30px;
+      padding-left: 5px;
+      border-color: rgb(230,230,230);
+    }
+    .age{
+      margin-top: -5px;
+      width:50px;
+      height: 30px;
+      padding-left: 5px;
+    }
+    .zhiding{
+        position: fixed;
+        top: 0;
+        z-index: 11;
+    }
+    .MT{
+      margin-top: 50px;
+    }
+    .mess{
+      padding: 20px;
+      font-size: 12px;
+    }
+</style>
+</head>
+<body class="am-with-fixed-navbar">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器， 不提供支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+    <header data-am-widget="header" class="am-header am-header-default zhiding">
+        <a href="widget.html"><i class="am-icon-home"></i></a>
+      <h1 class="am-header-title">
+            我要提问
+      </h1>
+  </header>
+
+  <!--  -->
+<!-- 
+   -->
+
+   <section data-am-widget="accordion" class="am-accordion am-accordion-default doc-accordion-class am-no-layout MT" id="doc-accordion-example" data-am-accordion="{  }">
+      <!--  <label>
+         <p class="field-label">姓名</p>
+       <input type="text" name="name" id="name" class="box">
+       </label> -->
+       <label>
+         <p class="field-label" maxNum="100">年龄</p>
+       <input type="text" name="name" id="age" class="age">
+       </label>
+       <label>
+       <p class="field-label">性别</p>
+         <select multiple data-am-selected id="gender">
+          <i class="am-selected-icon am-icon-caret-down"></i>
+          <optgroup label="性别">
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </optgroup>
+        </select>
+       </label>
+       <label>
+         <p class="field-label">症状</p>
+         <textarea placeholder="留下你的问题" type="textarea" id="content"></textarea>
+       </label>
+      
+        <input class="btn btn-secondary btn-block" value="提交" type="submit" id="submit">
+        <p class="mess">说明
+1、  本网站只提供健康咨询服务，不提供疾病诊断和治疗服务；
+2、  资料显示，耳穴疗法可治疗200余种病症，疗效大多在83%~99%；
+3、  耳穴贴压法无任何药物副作用，治疗平均成本大约为30元；
+4、  本网站根据您咨询的问题复杂程度决定是否收费，简单问题免费，复杂问题30元/次，线下咨询50元/次。
+</p>
+   </section> 
+   
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default am-no-layout" id="">
+        <ul class="am-navbar-nav am-cf am-avg-sm-4">
+            <li data-am-navbar-qrcode="">
+              <a href="" class="">
+                    <span class="am-icon-qrcode"></span>
+                  <span class="am-navbar-label">二维码</span>
+              </a>
+            </li>
+            <li>
+              <a href="widget8.html" class="">
+                    <span class="am-icon-user-md"></span>
+                  <span class="am-navbar-label">一键咨询</span>
+              </a>
+            </li>
+            <li>
+              <a href="widget8.html" class="">
+                    <span class="am-icon-male"></span>
+                  <span class="am-navbar-label">我的资料</span>
+              </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- <div data-am-widget="gotop" class="am-gotop am-gotop-default am-no-layout">
+      <a href="#top" title="TOP">
+          <span class="am-gotop-title">TOP</span>
+            <i class="am-gotop-icon am-icon-chevron-up"></i>
+      </a>
+    </div> -->
+
+    <footer data-am-widget="footer" class="am-footer am-footer-default am-no-layout" data-am-footer="{  }">
+      <div class="am-footer-switch">
+      <span class="am-footer-ysp" data-rel="mobile" data-am-modal="{target: '#am-switch-mode'}">
+          手机版
+      </span>
+       
+      </div>
+      <div class="am-footer-miscs ">
+  
+            <!-- <p>由 <a href="www.erxue.net" title="上官衍鹏" target="_blank" class="">上官衍鹏</a>
+              提供技术支持</p> -->
+          <p>CopyRight©2017  耳穴 Inc.</p>
+          <!-- <p>京ICP备15098725z</p> -->
+      </div>
+    </footer>
+  
+    <div id="am-footer-modal" class="am-modal am-modal-no-btn am-switch-mode-m ">
+      <div class="am-modal-dialog">
+        <div class="am-modal-hd am-modal-footer-hd">
+          <a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close="">×</a>
+        </div>
+        
+      </div>
+    </div>
+  
+ 
+
+
+
+<div class="am-modal am-modal-no-btn" id=""><div class="am-modal-dialog"><div class="am-modal-bd"><canvas width="200" height="200"></canvas></div></div></div></body></html>
+
+
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.js"></script>
+<script src="assets/js/handlebars.min.js"></script>
+<script src="assets/js/amazeui.widgets.helper.js"></script>
+<script src="assets/js/url.js"></script>
+
+<script type="text/javascript">
+  var z = 1;
+ // z = typeof y;
+  y=z;
+console.log(y);
+  var otop = document.getElementsByClassName('zhiding')[0];
+      otop.onclick = function(){
+          window.scrollTo(0,0);
+      }
+// $('#btn-moni').click(function(event) {
+//   /* Act on the event */
+//   $.ajax({
+//     url: url+'/ErXueSSM/getSession.action',
+//     type: 'GET',
+//     dataType: '',
+//     data: {},
+//     success:function(){
+//       alert('登陆成功');
+//     }
+//   });
+  
+// });模拟登陆
+
+  //提交问题
+  
+  $('#submit').click(function(event) {
+    
+   //  question.name=document.getElementById('name').value;
+   // name?console.log(name):alert('请填写正确的姓名');
+    var  age=document.getElementById('age').value;
+    age?console.log(age):alert('请填写正确的年龄');
+   var gender=document.getElementById('gender').value;
+    gender?console.log(gender):alert('请填写正确的性别');
+   var content=document.getElementById('content').value;
+    content?console.log(content):alert('请填写正确的症状');
+    //console.log(question);
+    $.ajax({
+      url: url+'/ErXueSSM/user/addQuestion.action',
+      type: 'POST',
+      dataType: '',
+      //contentType:"application/json",
+      data: {gender:gender,content:content,age:age},
+      success:function(data){
+        data?alert('提交成功'):alert('提交失败，请重试');
+        data?window.location.href="widget6_page1.html":alert('no');
+
+      }
+    });
+    
+    /* Act on the event */
+  });
+    
+    
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+#submit{
+    margin-top: 2rem; 
+}
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+h6{
+    color: red;
+}
